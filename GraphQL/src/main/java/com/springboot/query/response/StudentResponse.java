@@ -15,6 +15,7 @@ public class StudentResponse {
 	private String city;
 	private List<SubjectResponse> learningSubjects;
 	private Student student;
+	private String fullName;
 
 	public Student getStudent() {
 		return student;
@@ -78,6 +79,14 @@ public class StudentResponse {
 
 	public void setLearningSubjects(List<SubjectResponse> learningSubjects) {
 		this.learningSubjects = learningSubjects;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public StudentResponse(Student student) {
