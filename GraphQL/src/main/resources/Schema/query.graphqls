@@ -2,9 +2,19 @@ type Query{
 	firstQuery : String
 	fullName(firstName : String, lastName : String) : String
 	fullNameWithJsonRequest(request : FullNameRequest) : String
+	student(id : Long) : StudentResponse
 }
 
 input FullNameRequest{
 	firstName : String!
 	lastName : String!
+}
+
+type StudentResponse{
+	id : Long
+	firstName : String
+	lastName : String
+	email : String
+	street : String
+	city : String
 }
