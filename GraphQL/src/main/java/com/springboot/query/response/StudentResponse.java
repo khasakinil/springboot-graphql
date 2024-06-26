@@ -14,6 +14,15 @@ public class StudentResponse {
 	private String street;
 	private String city;
 	private List<SubjectResponse> learningSubjects;
+	private Student student;
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
 
 	public long getId() {
 		return id;
@@ -73,18 +82,19 @@ public class StudentResponse {
 
 	public StudentResponse(Student student) {
 		super();
+		this.student = student;
 		this.id = student.getId();
 		this.firstName = student.getFirstName();
 		this.lastName = student.getLastName();
 		this.email = student.getEmail();
 		this.street = student.getAddress().getStreet();
 		this.city = student.getAddress().getCity();
-		if (student.getLearningSubjects() != null) {
-			learningSubjects = new ArrayList<SubjectResponse>();
-			for (Subject subject : student.getLearningSubjects()) {
-				learningSubjects.add(new SubjectResponse(subject));
-			}
-		}
+		/*
+		 * if (student.getLearningSubjects() != null) { learningSubjects = new
+		 * ArrayList<SubjectResponse>(); for (Subject subject :
+		 * student.getLearningSubjects()) { learningSubjects.add(new
+		 * SubjectResponse(subject)); } }
+		 */
 	}
 
 }
