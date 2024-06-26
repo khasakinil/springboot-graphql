@@ -15,4 +15,8 @@ public class GraphQLQuery implements GraphQLQueryResolver {
 	public String fullName(String firstName, String lastName) {
 		return firstName + " " + lastName;
 	}
+
+	public String fullNameWithJsonRequest(FullNameRequest request) {
+		return request.getFirstName() + " " + request.getLastName();
+	}
 }
