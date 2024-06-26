@@ -5,6 +5,6 @@ type Query{
 }
 
 input FullNameRequest{
-	firstName : String
-	lastName : String
+	firstName : String!
+	lastName : String!
 }
